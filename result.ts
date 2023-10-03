@@ -1,18 +1,29 @@
 
 export class Ok<T> {
-  private _value: T;
-  constructor(value: T) {
-    this._value = value
-  }
+	private _value: T;
+	constructor(value: T) {
+		this._value = value;
+	}
 
-  isOK() {return true}
-  isErr() {return false}
-  ok() {return this._value}
-  err() {return null}  
-  public get okValue() : T {
-    return this._value
-  }
-  
+	isOK() {
+		return true;
+	}
+	isErr() {
+		return false;
+	}
+	ok() {
+		return this._value;
+	}
+	err() {
+		return null;
+	}
+	public get okValue(): T {
+		return this._value;
+	}
+
+	public get errValue(): null {
+		return null;
+	}
 }
 
 export class Err<E> {
@@ -36,9 +47,17 @@ export class Err<E> {
 	public get errValue(): E {
 		return this._value;
 	}
+
+	public get okValue(): null {
+		return null;
+	}
 }
 
-// type ExcludeOk = Exclude<>
+export type Result<T, E> = Ok<T> | Err<E>;
 
-export type Result<T, E> = Exclude<Ok<T>, { errValue: ''}> | Exclude<Err<E>, { okValue: '' }>;
-//                          ^?
+export const matchresult = <T, E>(result: Result<T, E>) => {
+	return {
+		ok: result.okValue,
+		err: result.errValue,
+	};
+}
