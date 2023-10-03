@@ -24,6 +24,10 @@ export class Ok<T> {
 	public get errValue(): null {
 		return null;
 	}
+
+	// TODO
+	unwrap() {}
+	unwrapErr() {}
 }
 
 export class Err<E> {
@@ -51,24 +55,13 @@ export class Err<E> {
 	public get okValue(): null {
 		return null;
 	}
+
+	// TODO
+	unwrap() {}
+	unwrapErr() {}
 }
 
 export type Result<T, E> = Ok<T> | Err<E>;
-
-// export interface ResultInterface<T, E> {
-// 	Ok: Ok<T>;
-// 	Err: Err<E>;
-
-// 	unwrap: (res: ResultEither<T, E>) => {}
-// };
-
-// export class Result<T, E> implements ResultInterface<T, E> {
-// 	Ok: Ok<T>;
-// 	Err: Err<E>;
-// 	unwrap: (res: ResultEither<T, E>) => {
-	
-// 	};
-// }
 
 export const matchresult = <T, E>(result: Result<T, E>) => {
 	return {
