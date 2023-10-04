@@ -26,7 +26,9 @@ export class Ok<T> {
 	}
 
 	// TODO
-	unwrap() {}
+	unwrap(): T {
+		return this._value
+	}
 	unwrapErr() {}
 }
 
@@ -58,10 +60,13 @@ export class Err<E> {
 
 	// TODO
 	unwrap() {}
-	unwrapErr() {}
+	unwrapErr(): E {
+		return this._value;
+	}
 }
 
 export type Result<T, E> = Ok<T> | Err<E>;
+
 
 export const matchresult = <T, E>(result: Result<T, E>) => {
 	return {
