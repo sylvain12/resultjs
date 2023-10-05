@@ -1,4 +1,4 @@
-import { Err, Ok, Result, matchresult } from './result';
+import { Err, Ok, Result, matchresult, UnwrapError } from './src/result';
 
 interface User {
   name: String,
@@ -26,26 +26,3 @@ function getUserByEmail(email: string): Result<User, string> {
 
 const res = getUserByEmail('sylvainka12@gmail.com');
 const { err, ok } = matchresult(res);
-console.log(err, ok)
-// res.unwrap()
-
-//    ^?
-// switch (res) {
-//   case res.isOK():
-//     console.log(res.errValue);
-//     break;
-
-//   case res.isErr():
-//     console.log(res.okValue)
-//     break;
-// }
-
-// res.isErr()
-
-// if (res.isOK()) {
-  // console.log(res.okValue)
-//            ^?
-// }else {
-	// console.log(res.errValue);
-	//          ^?
-// }
