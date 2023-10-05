@@ -1,30 +1,77 @@
 //------------------- Ok Class --------------------
+
+/**
+ * Represents the 'Ok' state of a Result object.
+ * @class
+ * @type {T} - 'Ok' value generic type
+ */
 export class Ok<T> {
 	private _value: T;
 	constructor(value: T) {
 		this._value = value;
 	}
 
+	/**
+	 * Checks if the Result is in 'Ok' state.
+	 * @function
+	 * @returns {boolean} - Return true for 'Ok' value
+	 */
 	isOK() {
 		return true;
 	}
+
+	/**
+	 * Checks if the Result is in 'Err' state.
+	 * @function
+	 * @returns {boolean} - Return false for 'Ok' value
+	 */
 	isErr() {
 		return false;
 	}
-	ok() {
+
+	/**
+	 * Retrieves the wrapped value in the 'Ok' state.
+	 * @function
+	 * @returns {T} - 'Ok' value type
+	 */
+	ok(): T {
 		return this._value;
 	}
-	err() {
+
+	/**
+	 * Retrieves the 'Err' value for Result in 'Ok' state.
+	 * @function
+	 * @returns {null} - The wrapped value is always null.
+	 */
+	err(): null {
 		return null;
 	}
+
+	/**
+	 * Gets the wrapped value in the 'Ok' state.
+	 * @public
+	 * @readonly
+	 * @returns {T} - 'Ok' value type
+	 */
 	public get okValue(): T {
 		return this._value;
 	}
 
+	/**
+	 * Gets 'Err' value for Result in 'Ok' state.
+	 * @public
+	 * @readonly
+	 * @returns {null} - The wrapped value is always null.
+	 */
 	public get errValue(): null {
 		return null;
 	}
 
+	/**
+	 * Retrieves the wrapped value.
+	 * @function
+	 * @returns {T} - 'Ok' value type
+	 */
 	unwrap(): T {
 		return this._value;
 	}
@@ -79,6 +126,13 @@ export class Err<E> {
 export type Result<T, E> = Ok<T> | Err<E>;
 
 
+//------------------- Result match --------------------
+/**
+ * Matches a Result object and returns an object with the 'ok' and 'err' values.
+ * @function
+ * @param {Result<T, E>} result - The Result object to match.
+ * @returns {{ ok: T | undefined, err: E | undefined }} - An object containing the 'ok' and 'err' values.
+ */
 export const matchresult = <T, E>(result: Result<T, E>) => {
 	return {
 		ok: result.okValue,
