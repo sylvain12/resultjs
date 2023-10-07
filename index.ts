@@ -24,5 +24,9 @@ function getUserByEmail(email: string): Result<User, string> {
 }
 
 
-const res = getUserByEmail('sylvainka12@gmail.com');
-const { err, ok } = matchresult(res);
+// const res = getUserByEmail('sylvainka12@gmail.com');
+// const { err, ok } = matchresult(res);
+
+
+const data = new Ok('test');
+console.log(typeof data.ok())
