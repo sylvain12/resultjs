@@ -6,24 +6,31 @@ describe('Ok', () => {
 	const value = 'My ok class';
 	const ok = new Ok<string>(value);
 
-	it('Should be an instance of Ok', () => {
+	it('Should be instance of Ok', () => {
 		expect(ok).toBeInstanceOf(Ok);
 	});
 
-	it('Should return true when check if object is Ok', () => {
-		expect(ok.isOK()).toBeTrue();
+	it('Should have string type', () => {
+		expect(typeof ok).toBeTypeOf('string')
 	});
 
-	it('Should return false when check if object is Err', () => {
+	it('Should be false when check isErr', () => {
 		expect(ok.isErr()).toBeFalse();
 	});
 
-	it('Should return the Ok value', () => {
-		expect(ok.okValue).toBe(value);
-	});
+		it('Should be true when check if isOk', () => {
+			expect(ok.isOK()).toBeTrue();
+		});
 
-	it('Should return null when trying to get errValue from Ok instance', () => {
-		expect(ok.errValue).toBeNull();
+		it('Should be bull when getting the err value', () => {
+				expect(ok.errValue).toBeNull();
+				expect(ok.err()).toBeNull();
+		});
+
+	it('Should contains value: My ok class', () => {
+		expect(ok.okValue).toBe(value);
+		expect(ok.ok()).toBe(value);
+		expect(ok.unwrap()).toBe(value);
 	});
 
 	it('Should throw an error when trying to unwrap Err value', () => {
