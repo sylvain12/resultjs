@@ -188,13 +188,22 @@ export type Result<T, E> = Ok<T> | Err<E>;
  * @param {Result<T, E>} result - The Result object to match.
  * @returns {{ ok: T | null, err: E | null }} - An object containing the 'ok' and 'err' values.
  */
-export const matchresult = <T, E>(result: Result<T, E>) => {
+export const matchResult = <T, E>(result: Result<T, E>) => {
 	return {
 		ok: result.okValue,
 		err: result.errValue,
 	};
 }
 
+// const retrieveResult = async <T, E>(result: Promise<Result<T, E>>) => {
+// 	const res = await result;
+// 	return matchResult(res);
+// }
+
+export const matchResultPromise = <T, E>(result: Promise<Result<T, E>>) => {
+	// retrieveResult(result).
+	// return matchResult(res);
+};
 
 //------------------- Custom Errors --------------------
 /**

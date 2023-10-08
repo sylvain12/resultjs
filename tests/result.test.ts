@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'bun:test';
-import { Err, Ok, Result, matchresult, UnwrapError } from '../src/result';
+import { Err, Ok, Result, matchResult } from '../src/result';
 
 
 	interface User{
@@ -62,14 +62,14 @@ describe('Result', () => {
 });
 
 
-describe('matchresult', () => {
+describe('matchResult', () => {
 	
 	const email = 'dsmith@email.com';
 	const user = getUserByEmail(email);
 	const notFoundUser = getUserByEmail('notfound@email.com');
 
-	const res = matchresult(user)
-	const notFoundRes = matchresult(notFoundUser);
+	const res = matchResult(user)
+	const notFoundRes = matchResult(notFoundUser);
 
 	it('Should get user name', () => {
 		expect(res.ok?.name).toBe('Dan Smith');
