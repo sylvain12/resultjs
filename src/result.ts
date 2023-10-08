@@ -186,7 +186,7 @@ export type Result<T, E> = Ok<T> | Err<E>;
  * Matches a Result object and returns an object with the 'ok' and 'err' values.
  * @function
  * @param {Result<T, E>} result - The Result object to match.
- * @returns {{ ok: T | undefined, err: E | undefined }} - An object containing the 'ok' and 'err' values.
+ * @returns {{ ok: T | null, err: E | null }} - An object containing the 'ok' and 'err' values.
  */
 export const matchresult = <T, E>(result: Result<T, E>) => {
 	return {
