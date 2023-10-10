@@ -40,7 +40,7 @@ jobs:
       - uses: oven-sh/setup-bun@v1
       - run: bun install
       - name: Build package
-        run: bun build
+        run: bun run build
       - name: Publish package
         run: bun run semantic-release
         env:

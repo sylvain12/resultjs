@@ -1,9 +1,10 @@
 {
   "name": "resultjs",
   "description": "",
-  "module": "src/result.ts",
   "license": "MIT",
   "type": "module",
+  "main": "dist/result.js",
+  "types": "dist/result.d.ts",
   "devDependencies": {
     "bun-types": "latest",
     "cz-conventional-changelog": "^3.3.0",
@@ -12,6 +13,7 @@
   "scripts": {
     "lint": "tsc",
     "test": "bun test",
+    "build": "bun build ./src/result.ts --outdir ./dist",
     "semantic-release": "semantic-release --branches main",
     "commit": "cz"
   },
