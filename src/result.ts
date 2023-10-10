@@ -195,20 +195,15 @@ export const matchResult = <T, E>(result: Result<T, E>) => {
 	};
 }
 
-// const retrieveResult = async <T, E>(result: Promise<Result<T, E>>) => {
-// 	const res = await result;
-// 	return matchResult(res);
-// }
-
-export const matchResultPromise = <T, E>(result: Promise<Result<T, E>>) => {
-	// retrieveResult(result).
-	// return matchResult(res);
+const matchResultPromise = async <T, E>(resultPromise: Promise<Result<T, E>>) => {
+	// TODO
+	// Implement promise result
 };
 
 //------------------- Custom Errors --------------------
 /**
  * Represents an error that occurs when attempting to unwrap a value.
- * @class
+ * @class 
  * @extends Error
  * @param {string} message - The error message.
  */
