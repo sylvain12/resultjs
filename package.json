@@ -16,7 +16,7 @@
     "test": "bun test",
     "build": "bun build ./src/result.ts --outdir ./dist --minify --sourcemap=external && bun run build:declaration",
     "build:declaration": "dts-bundle-generator -o ./dist/result.d.ts ./src/result.ts",
-    "semantic-release": "semantic-release",
+    "semantic-release": "semantic-release --branches main",
     "commit": "cz"
   },
   "peerDependencies": {
