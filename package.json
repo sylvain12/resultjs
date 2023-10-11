@@ -8,13 +8,15 @@
   "devDependencies": {
     "bun-types": "latest",
     "cz-conventional-changelog": "^3.3.0",
+    "dts-bundle-generator": "^8.0.1",
     "semantic-release": "^22.0.5"
   },
   "scripts": {
     "lint": "tsc",
     "test": "bun test",
-    "build": "bun build ./src/result.ts --outdir ./dist",
-    "semantic-release": "semantic-release --branches main",
+    "build": "bun build ./src/result.ts --outdir ./dist --minify --sourcemap=external && bun run build:declaration",
+    "build:declaration": "dts-bundle-generator -o ./dist/result.d.ts ./src/result.ts",
+    "semantic-release": "semantic-release",
     "commit": "cz"
   },
   "peerDependencies": {
