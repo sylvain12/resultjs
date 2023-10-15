@@ -1,5 +1,12 @@
 
 
+## 0.0.3 (2023-10-15)
+
+
+### Bug Fixes
+
+* change package name ([f5b3a03](https://github.com/2kas-dev/resultjs/commit/f5b3a034f772669aa3facfe337474e676cef4653))
+
 ## 0.0.2 (2023-10-15)
 
 
