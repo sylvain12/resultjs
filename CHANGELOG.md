@@ -1,5 +1,12 @@
 
 
+## 0.0.2 (2023-10-15)
+
+
+### Bug Fixes
+
+* add pushish step on pipeline ([2e2c78c](https://github.com/2kas-dev/resultjs/commit/2e2c78c0d6ce276d2d8a67e858901b895802f5f8))
+
 ## 0.0.1 (2023-10-12)
 
 
