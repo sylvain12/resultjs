@@ -5,6 +5,7 @@
   "type": "module",
   "main": "dist/result.js",
   "types": "dist/result.d.ts",
+  "module": "dist/result.mjs",
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
@@ -12,12 +13,14 @@
     "bun-types": "latest",
     "cz-conventional-changelog": "^3.3.0",
     "dts-bundle-generator": "^8.0.1",
+    "husky": "^8.0.0",
     "release-it": "^16.2.1",
-    "husky": "^8.0.0"
+    "tsup": "^7.2.0"
   },
   "scripts": {
     "lint": "tsc",
     "test": "bun test",
+    "build": "tsup --config tsup.config.ts",
     "build:declaration": "dts-bundle-generator -o ./dist/result.d.ts ./src/result.ts",
     "release": "release-it",
     "commit": "cz",

@@ -45,7 +45,7 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: bun install
       - name: Build package
-        run: npm run build
+        run: bun run build
       - name: Release package
         run: bun run release --ci
         env:
