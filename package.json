@@ -21,7 +21,7 @@
     "lint": "tsc",
     "test": "bun test",
     "build": "tsup --config tsup.config.ts",
-    "release": "release-it",
+    "release": "release-it --ci",
     "commit": "cz",
     "prepare": "husky install"
   },
