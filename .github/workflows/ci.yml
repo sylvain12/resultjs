@@ -47,7 +47,7 @@ jobs:
       - name: Build package
         run: bun run build
       - name: Release package
-        run: bun run release --ci
+        run: bun run release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
