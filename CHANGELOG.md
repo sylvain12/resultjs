@@ -1,5 +1,13 @@
 
 
+## [0.0.4](https://github.com/2kas-dev/resultjs/compare/0.0.3...0.0.4) (2023-10-16)
+
+
+### Bug Fixes
+
+* add tsup package for build ([3ebb482](https://github.com/2kas-dev/resultjs/commit/3ebb482c83ea7248ff3a690278de503c4c19139f))
+* change build step command ([33a8b84](https://github.com/2kas-dev/resultjs/commit/33a8b84dcf6acab1d80f0d256e8a5b9ef76175e0))
+
 ## 0.0.3 (2023-10-15)
 
 
