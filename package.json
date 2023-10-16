@@ -21,7 +21,6 @@
     "lint": "tsc",
     "test": "bun test",
     "build": "tsup --config tsup.config.ts",
-    "build:declaration": "dts-bundle-generator -o ./dist/result.d.ts ./src/result.ts",
     "release": "release-it",
     "commit": "cz",
     "prepare": "husky install"
