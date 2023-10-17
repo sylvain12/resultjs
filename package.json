@@ -6,6 +6,12 @@
   "main": "dist/result.js",
   "types": "dist/result.d.ts",
   "module": "dist/result.mjs",
+  "files": [
+    "dist/**/*",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
