@@ -1,5 +1,12 @@
 
 
+## 0.0.5 (2023-10-17)
+
+
+### Bug Fixes
+
+* add --no-save option when run bun install ([49d24bb](https://github.com/2kas-dev/resultjs/commit/49d24bb8a3420c6f42cf75028ac547d3c769e59b))
+
 ## [0.0.4](https://github.com/2kas-dev/resultjs/compare/0.0.3...0.0.4) (2023-10-16)
 
 
