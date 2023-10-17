@@ -60,17 +60,15 @@ ResultJS provides a simple and readable way to handle success value and error.
 
 ## Installation
 
-To use this library, you can simply run this command.
-
 ```bash
-npm install resultjs
+npm i @sylvainka12/resultjs
 ```
 
 ## Usage
 
 ### Creating Result Objects
 
-The library provides two main classes for creating `Result` objects: `Ok<T>` for representing the 'Ok' state (success value) and `Err<E>` for representing the 'Err' state (error value). Here's how you can create instances of these classes:
+The package provides two main classes for creating `Result` objects: `Ok<T>` for representing the 'Ok' state (success value) and `Err<E>` for representing the 'Err' state (error value). Here's how you can create instances of these classes:
 
 ```typescript
 import { Ok, Err } from 'resultjs';
@@ -175,7 +173,7 @@ if (ok !== null) {
 
 ## Custom Errors
 
-The library includes a custom error class, `UnwrapError`, which you can use to represent errors that occur when attempting to unwrap a value. This error class extends the standard `Error` class and accepts a descriptive message as a constructor parameter.
+The package includes a custom error class, `UnwrapError`, which you can use to represent errors that occur when attempting to unwrap a value. This error class extends the standard `Error` class and accepts a descriptive message as a constructor parameter.
 
 ```typescript
 import { UnwrapError } from 'resultjs'; // Adjust the import path as needed
@@ -186,8 +184,8 @@ throw new UnwrapError("Tried to unwrap an 'Err' value");
 
 ## Contributing
 
-Contributions to this library are welcome! If you have any ideas for improvements, bug fixes, or new features, please open an issue or submit a pull request on the [GitHub repository](https://github.com/2kas-dev/resultjs).
+Contributions to this package are welcome! If you have any ideas for improvements, bug fixes, or new features, please open an issue or submit a pull request on the [GitHub repository](https://github.com/2kas-dev/resultjs).
 
 ## License
 
-This library is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This package is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
