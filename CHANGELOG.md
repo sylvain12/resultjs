@@ -1,5 +1,12 @@
 
 
+## 0.0.6 (2023-10-17)
+
+
+### Bug Fixes
+
+* remove npm ci before run package publish ([d364d25](https://github.com/2kas-dev/resultjs/commit/d364d253fbb869ada62ae0def9e4a9d665eae3c6))
+
 ## 0.0.5 (2023-10-17)
 
 
