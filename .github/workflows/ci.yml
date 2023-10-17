@@ -46,6 +46,8 @@ jobs:
       - run: bun install
       - name: Build package
         run: bun run build
+      - name: Check repo status
+        run: git status
       - name: Release package
         run: bun run release
         env:
