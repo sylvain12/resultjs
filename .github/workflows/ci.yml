@@ -13,8 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: oven-sh/setup-bun@v1
-      - run: bun install
-      - run: bun run lint && bun run test
+      - run: bun install && bun run lint && bun run test
 
   publish:
     name: 'Release & Publish'
@@ -34,7 +33,6 @@ jobs:
         run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-      - run: bun install
       - name: Release package
         run: bun run release
         env:
